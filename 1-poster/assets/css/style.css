@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #444;
+  color: #d88888;
+  font-size: 28px;
+}
+
+a {
+  color: lightgreen;
+}
+
+.body-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 70%;
+  margin: 50px auto;
+  max-width: 98%;
+}
+
+.grid-item {
+  color: lightgreen;
+  font-size: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-weight: 700;
+  grid-column: span 1;
+  grid-row: span 1;
+  min-height: 200px;
+}
+
+.grid-item-quote {
+  font-size: 1.4rem;
+  grid-column: span 2;
+  grid-row: span 2;
+  align-self: center;
+  margin-top: 30px;
+  color: #444
+}
+
+.pink {
+  background: lightcoral;
+}
+
+.black {
+  background: dimgrey;
+}
+
+.circle {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.triangle {
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  height: 100%;
+  width: 100%;
+}
+
+#poster-container {
+  background: white;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px 0;
+}
+
+#byline {
+  text-align: center;
+}
+
+#poster-body {
+  background: lightgreen;
+  width: 100%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: repeat(4, 2fr) 1fr;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+  #poster-body {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+}
